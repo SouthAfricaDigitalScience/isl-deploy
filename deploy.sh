@@ -9,10 +9,12 @@ module add gmp
 echo ${SOFT_DIR}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
-../configure --enable-shared \
+../configure  \
+--enable-shared \
 --enable-static  \
 --with-int=gmp \
---enable-shared \
+--with-gmp=build \
+--with-gmp-prefix=${GMP_DIR} \
 --prefix=${SOFT_DIR}
 make install -j2
 echo "Creating the modules file directory ${LIBRARIES}"

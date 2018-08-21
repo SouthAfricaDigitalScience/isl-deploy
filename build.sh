@@ -56,6 +56,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 --enable-shared \
 --enable-static  \
 --with-int=gmp \
---enable-shared \
+--with-gmp=build \
+--with-gmp-prefix=${GMP_DIR} \
 --prefix=${SOFT_DIR}
 make -j 2
