@@ -13,7 +13,7 @@ echo "All tests have passed, will now build into ${SOFT_DIR}"
 --enable-shared \
 --enable-static  \
 --with-int=gmp \
---with-gmp=build \
+--with-gmp=system \
 --with-gmp-prefix=${GMP_DIR} \
 --prefix=${SOFT_DIR}
 make install -j2

@@ -18,7 +18,6 @@ module avail
 module add ci
 module add gmp
 SOURCE_FILE=${NAME}-${VERSION}.tar.bz2
-whoami
 echo "REPO_DIR is "
 echo $REPO_DIR
 echo "SRC_DIR is "
@@ -56,7 +55,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 --enable-shared \
 --enable-static  \
 --with-int=gmp \
---with-gmp=build \
+--with-gmp=system \
 --with-gmp-prefix=${GMP_DIR} \
 --prefix=${SOFT_DIR}
 make -j 2
